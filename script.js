@@ -4,6 +4,13 @@
    2) EDIT AFFILIATE: change the AFFILIATES array below.
    ========================================================== */
 
+// Animated headline: split into words
+const h1 = document.querySelector(".hero h1");
+h1.setAttribute("aria-label", h1.textContent.trim());
+h1.innerHTML = h1.textContent.trim().split(" ").map((w, i) =>
+  `<span class="w" aria-hidden="true"><span style="animation-delay:${i * 0.09}s">${w}</span></span>`
+).join(" ");
+
 // Only link to official sites or open-source projects.
 const CARDS = [
   { name: "F-Droid", tag: "Open source", url: "https://f-droid.org", desc: "An app store for Android that only lists free software, with the source code for every app you install." },
