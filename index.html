@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Toolshelf: good apps, installed safely</title>
+<meta name="description" content="A short list of useful apps from their official sources, with plain guides for installing and updating them safely.">
+<!-- Replace YOUR-USERNAME / YOUR-REPO after deploying -->
+<link rel="canonical" href="https://YOUR-USERNAME.github.io/YOUR-REPO/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Toolshelf: good apps, installed safely">
+<meta property="og:description" content="Useful apps from official sources, plus plain installation guides.">
+<meta property="og:url" content="https://YOUR-USERNAME.github.io/YOUR-REPO/">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<script>/* Apply saved theme before paint (no flash) */
+try{var t=localStorage.getItem("theme")||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");document.documentElement.dataset.theme=t}catch(e){}</script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- Icon sprite: reused with <use href="#i-name"> -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-logo" viewBox="0 0 32 32"><path d="M6 24h20M6 16h20M6 8h12" stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></symbol>
+  <symbol id="i-out" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></symbol>
+</svg>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="#top"><svg class="icon" aria-hidden="true"><use href="#i-logo"/></svg>Toolshelf</a>
+    <nav aria-label="Main"><ul>
+      <li><a href="#tools">Tools</a></li>
+      <li><a href="#guides">Guides</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#support">Support</a></li>
+    </ul></nav>
+    <button class="theme" id="theme" aria-label="Switch between dark and light mode">
+      <svg class="icon sun" aria-hidden="true"><use href="#i-sun"/></svg>
+      <svg class="icon moon" aria-hidden="true"><use href="#i-moon"/></svg>
+    </button>
+    <a class="btn primary small" href="https://linktr.ee/Kaustubh_2009" target="_blank" rel="noopener noreferrer">Contact</a>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero" id="top">
+    <div class="wrap">
+      <h1>Apps worth installing, from the people who make them.</h1>
+      <p>A short, hand-picked shelf of free and open-source apps, with plain steps for getting them from the right place and keeping them updated.</p>
+      <div class="row">
+        <a class="btn primary" href="#tools">Browse the shelf</a>
+        <a class="btn" href="#guides">Read the install guide</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="tools">
+    <div class="wrap">
+      <div class="head">
+        <h2>On the shelf</h2>
+        <p class="lead">Every link goes to the official site or the open-source project. Nothing here is cracked, modded or repackaged.</p>
+      </div>
+      <!-- Cards are generated from the CARDS array in script.js -->
+      <div class="grid" id="cards"></div>
+    </div>
+  </section>
+
+  <section id="guides" class="alt">
+    <div class="wrap">
+      <div class="head"><h2>Installing an app safely</h2></div>
+      <ol class="steps">
+        <li class="reveal"><h3>Go to the official source</h3><p>Use the project’s own website, its GitHub releases page, or a store you trust. Type the address yourself instead of tapping an ad.</p></li>
+        <li class="reveal"><h3>Check what you downloaded</h3><p>Many projects publish a checksum or signature next to the file. If yours matches, the file wasn’t altered on the way to you.</p></li>
+        <li class="reveal"><h3>Install, then keep it updated</h3><p>Allow installs only for the one app that needs it, then switch that permission back off. Turn on updates so security fixes arrive.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="wrap">
+      <div class="head"><h2>Questions people ask</h2></div>
+      <div class="faq">
+        <details><summary>Are these apps free?</summary><p>The ones listed are free to use. Some projects accept donations, and a few have paid extras. Check each project’s own page.</p></details>
+        <details><summary>Why no modded or “premium unlocked” apps?</summary><p>Modified copies of paid apps are usually pirated, and they’re a common way malware spreads. This site only links to official and open-source releases.</p></details>
+        <details><summary>How do I know a download is genuine?</summary><p>Download from the project’s own site or repository, and compare the checksum if one is published. If a site is copying the app’s name but not its address, leave.</p></details>
+        <details><summary>Can I suggest an app?</summary><p>Yes. Send a message through the contact link below with the project’s official website.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section id="support" class="alt">
+    <div class="wrap">
+      <div class="head">
+        <h2>Support this project</h2>
+        <p class="lead">Toolshelf is free and has no ads. If it saved you time, you can chip in to cover hosting and the hours it takes to keep the list current.</p>
+      </div>
+      <!-- PLACEHOLDERS: replace each href="#" with your own link -->
+      <div class="btns">
+        <a class="btn primary" href="#" target="_blank" rel="noopener noreferrer">Pay via UPI</a>
+        <a class="btn" href="#" target="_blank" rel="noopener noreferrer">Ko-fi / Buy Me a Coffee</a>
+        <a class="btn" href="#" target="_blank" rel="noopener noreferrer">GitHub Sponsors</a>
+      </div>
+
+      <h3 style="margin-top:3.5rem;font-size:1.5rem">Gear I use</h3>
+      <p class="lead" style="margin-bottom:1.5rem">A few services I use myself. Cards are generated from the AFFILIATES array in script.js.</p>
+      <div class="grid" id="affiliates"></div>
+      <p class="note"><strong>Affiliate disclosure:</strong> some links above may earn me a small commission if you buy through them, at no extra cost to you. I only list things I’d recommend anyway.</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <div class="head">
+        <h2>Say hello</h2>
+        <p class="lead">Questions, app suggestions, or a project you need built. Everything I’m on is linked from one page.</p>
+      </div>
+      <a class="btn primary" href="https://linktr.ee/Kaustubh_2009" target="_blank" rel="noopener noreferrer">Contact me</a>
+      <div class="hire">
+        <div><h3>Hire me for freelance work</h3><p>Simple websites, landing pages and small web tools, built with plain HTML, CSS and JavaScript.</p></div>
+        <a class="btn" href="https://linktr.ee/Kaustubh_2009" target="_blank" rel="noopener noreferrer">Get in touch</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><strong>Disclaimer:</strong> Toolshelf is an independent project and isn’t affiliated with the apps listed. Names and logos belong to their owners. Always check an app’s official page before installing.</p>
+    <div class="links">
+      <a href="https://linktr.ee/Kaustubh_2009" target="_blank" rel="noopener noreferrer">Linktree</a>
+      <a href="privacy.html">Privacy policy</a>
+    </div>
+    <p>&copy; <span id="year">2026</span> Toolshelf</p>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
