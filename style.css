@@ -3,6 +3,26 @@
    EDIT COLORS HERE: change the variables in :root (light mode)
    and [data-theme="dark"] (dark mode). Accent = --accent.
    ========================================================== */
+/* Hover effects */
+.nav ul a{position:relative}
+.nav ul a::after{content:"";position:absolute;left:0;bottom:-4px;width:100%;height:2px;
+  background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .25s}
+.nav ul a:hover::after,.nav ul a:focus-visible::after{transform:scaleX(1)}
+.btn:hover{transform:translateY(-2px)}
+summary:hover{color:var(--accent)}
+.steps li{transition:border-color .25s}
+.steps li:hover{border-color:var(--accent)}
+
+
+
+/* Animated headline */
+.hero h1{animation:none}
+.hero h1 .w{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.12em}
+.hero h1 .w > span{display:inline-block;transform:translateY(110%);
+  animation:wordUp .8s cubic-bezier(.2,.8,.2,1) forwards;transition:color .25s}
+.hero h1 .w:hover > span{color:var(--accent)}
+@keyframes wordUp{to{transform:none}}
+@media(prefers-reduced-motion:reduce){.hero h1 .w > span{transform:none}}
 :root{
   --bg:#F4F6F5; --surface:#FFFFFF; --text:#16201F; --muted:#586563;
   --line:#D9DFDD; --accent:#0B7A75; --accent-ink:#FFFFFF;
