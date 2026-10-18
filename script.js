@@ -6,20 +6,15 @@
 
 // Only link to official sites or open-source projects.
 const CARDS = [
-  { name: "F-Droid", tag: "Open source", url: "https://f-droid.org", desc: "An app store for Android that only lists free software, with the source code for every app you install." },
-  { name: "NewPipe", tag: "Open source", url: "https://newpipe.net", desc: "A lightweight YouTube client for Android. No Google account, no tracking, and background playback built in." },
-  { name: "Termux", tag: "Open source", url: "https://termux.dev", desc: "A terminal and Linux environment on your phone. Good for learning the command line anywhere." },
-  { name: "VLC", tag: "Official", url: "https://www.videolan.org/vlc/", desc: "Plays almost any video or audio file on any device, with no ads and no sign-up." },
-  { name: "Bitwarden", tag: "Open source", url: "https://bitwarden.com", desc: "A password manager with a generous free tier. Stores one strong password per site so you don’t have to." },
-  { name: "Syncthing", tag: "Open source", url: "https://syncthing.net", desc: "Syncs folders between your own devices directly, without sending files through anyone’s cloud." }
+   { name: "MicroG Services", tag: "Install This First(Most Important)", url: "https://github.com/vancedto/vanced.to/releases/download/2026-8/vanced.to_vanced_gms_microg_v0.3.13.2.250932.apk", desc: "MicroG, also known as GMSCore, is a free and open-source implementation of Google's proprietary Android user space apps and libraries. It allows users to access Google services without installing the full Google Play Services package, providing a more lightweight and privacy-focused alternative. MicroG is essential for running apps that depend on Google services on devices or custom ROMs that don't include them by default." },
+  { name: "Google Photos", tag: "Open source", url: "https://github.com/vancedto/vanced.to/releases/download/2026-39/vanced.to_rushi_com.google.android.apps.photos_arm64v8a_v7.92.0.977185651_cli1.17.0.6_p1.23.0.1.apk", desc: "An app for Unlimited Google Cloud storage for free." },
+  { name: "Youtube Premium", tag: "Open source", url: "https://github.com/vancedto/vanced.to/releases/download/2026-7/vanced.to_vanced_youtube_ext_v20.05.46_cli5.0.2_p5.14.1.9.apk", desc: "A Youtube Premium for Android. With your own Google account, no tracking, and background playback built in and many other premium features." },
+  { name: "Youtube Music Premium", tag: "Open source", url: "https://github.com/vancedto/vanced.to/releases/download/2026-7/vanced.to_vanced_youtube_music_ext_arm64_v8a_v8.30.54_cli5.0.2_p5.14.1.9.apk", desc: "A Youtube Music Premium for Android. With your own Google account, no tracking, and download any song and many other premium features." },
+  { name: "X", tag: "Official", url: "https://github.com/vancedto/vanced.to/releases/download/2026-29/vanced.to_vanced_twitter_piko_v12.7.1-release.0_cli1.10.0_p3.8.0.4.apk", desc: "Use Twitter with all features and No Ads." },
+  { name: "All In one Pdf reader", tag: "Open source", url: "https://github.com/vancedto/vanced.to/releases/download/2026-39/vanced.to_rushi_alldocumentreader.office.viewer.filereader.pdfviewer_arm64v8a_v3.2.4_cli1.17.0.6_p1.23.0.1.apk", desc: "This App will unlock premium membership features without requiring a subscription and eliminate in-app advertisements and promotional banners. Users can enjoy a seamless, unrestricted experience with full access to advanced tools right out of the box." }
 ];
 
 // Placeholder links: replace "#" with your real affiliate URLs.
-const AFFILIATES = [
-  { name: "VPN service", desc: "For public Wi-Fi at college or cafes.", url: "#" },
-  { name: "Web hosting", desc: "When your project outgrows GitHub Pages.", url: "#" },
-  { name: "Developer tools", desc: "Editors and utilities I actually use.", url: "#" }
-];
 
 const arrow = '<svg class="icon" aria-hidden="true"><use href="#i-out"/></svg>';
 
