@@ -3,37 +3,17 @@
    EDIT COLORS HERE: change the variables in :root (light mode)
    and [data-theme="dark"] (dark mode). Accent = --accent.
    ========================================================== */
-/* Hover effects */
-.nav ul a{position:relative}
-.nav ul a::after{content:"";position:absolute;left:0;bottom:-4px;width:100%;height:2px;
-  background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .25s}
-.nav ul a:hover::after,.nav ul a:focus-visible::after{transform:scaleX(1)}
-.btn:hover{transform:translateY(-2px)}
-summary:hover{color:var(--accent)}
-.steps li{transition:border-color .25s}
-.steps li:hover{border-color:var(--accent)}
-
-
-
-/* Animated headline */
-.hero h1{animation:none}
-.hero h1 .w{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.12em}
-.hero h1 .w > span{display:inline-block;transform:translateY(110%);
-  animation:wordUp .8s cubic-bezier(.2,.8,.2,1) forwards;transition:color .25s}
-.hero h1 .w:hover > span{color:var(--accent)}
-@keyframes wordUp{to{transform:none}}
-@media(prefers-reduced-motion:reduce){.hero h1 .w > span{transform:none}}
 :root{
   --bg:#F4F6F5; --surface:#FFFFFF; --text:#16201F; --muted:#586563;
-  --line:#D9DFDD; --accent:#0B7A75; --accent-ink:#FFFFFF;
+  --line:#D9DFDD; --accent:#000000; --accent-ink:#FFFFFF;
   --radius:10px;
   --head:"Bricolage Grotesque",Georgia,serif;
   --body:"Hanken Grotesk",system-ui,sans-serif;
   color-scheme:light;
 }
 [data-theme="dark"]{
-  --bg:#121716; --surface:#1A2120; --text:#E8EEEC; --muted:#97A5A2;
-  --line:#2A3331; --accent:#4FD1C5; --accent-ink:#0B1413;
+  --bg:#121716; --surface:#000000; --text:#E8EEEC; --muted:#97A5A2;
+  --line:#2A3331; --accent:#ffffff; --accent-ink:#0B1413;
   color-scheme:dark;
 }
 *{box-sizing:border-box}
@@ -132,3 +112,22 @@ footer a{color:var(--text)}
 .reveal{opacity:0;transform:translateY(12px);transition:opacity .5s,transform .5s}
 .reveal.in{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}html{scroll-behavior:auto}}
+
+/* Animated headline */
+.hero h1{animation:none}
+.hero h1 .w{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.12em}
+.hero h1 .w > span{display:inline-block;transform:translateY(110%);
+  animation:wordUp .8s cubic-bezier(.2,.8,.2,1) forwards;transition:color .25s}
+.hero h1 .w:hover > span{color:var(--accent)}
+@keyframes wordUp{to{transform:none}}
+@media(prefers-reduced-motion:reduce){.hero h1 .w > span{transform:none}}
+/* Hover effects */
+.nav ul a{position:relative}
+.nav ul a::after{content:"";position:absolute;left:0;bottom:-4px;width:100%;height:2px;
+  background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .25s}
+.nav ul a:hover::after,.nav ul a:focus-visible::after{transform:scaleX(1)}
+.btn:hover{transform:translateY(-2px)}
+summary:hover{color:var(--accent)}
+.steps li{transition:border-color .25s}
+.steps li:hover{border-color:var(--accent)}
+.btn:hover{transform:translateY(-2px)}
