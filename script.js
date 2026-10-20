@@ -13,6 +13,28 @@ const CARDS = [
   { name: "All In one Pdf reader", tag: "Click to install", url: "https://github.com/vancedto/vanced.to/releases/download/2026-39/vanced.to_rushi_alldocumentreader.office.viewer.filereader.pdfviewer_arm64v8a_v3.2.4_cli1.17.0.6_p1.23.0.1.apk", desc: "Users can enjoy a seamless, unrestricted experience with full access to advanced tools right out of the box." }
 ];
 
+// Placeholder links: replace "#" with your real affiliate URLs.
+const AFFILIATES = [
+  { name: "VPN service", desc: "For public Wi-Fi at college or cafes.", url: "#" },
+  { name: "Web hosting", desc: "When your project outgrows GitHub Pages.", url: "#" },
+  { name: "Developer tools", desc: "Editors and utilities I actually use.", url: "#" }
+];
+
+const arrow = '<svg class="icon" aria-hidden="true"><use href="#i-out"/></svg>';
+
+document.getElementById("cards").innerHTML = CARDS.map(c => `
+  <a class="card reveal" href="${c.url}" target="_blank" rel="noopener noreferrer">
+    <span class="tag">${c.tag}</span>
+    <h3>${c.name} ${arrow}</h3>
+    <p>${c.desc}</p>
+  </a>`).join("");
+
+document.getElementById("affiliates").innerHTML = AFFILIATES.map(a => `
+  <a class="card reveal" href="${a.url}" target="_blank" rel="sponsored noopener noreferrer" data-placeholder="${a.url === '#'}">
+    <h3>${a.name} ${arrow}</h3>
+    <p>${a.desc}</p>
+  </a>`).join("");
+
 // Links still set to "#" do nothing until you fill them in.
 document.addEventListener("click", e => {
   const a = e.target.closest('a[href="#"]');
