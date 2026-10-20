@@ -15,9 +15,9 @@ const CARDS = [
 
 // Placeholder links: replace "#" with your real affiliate URLs.
 const AFFILIATES = [
-  { name: "VPN service", desc: "For public Wi-Fi at college or cafes.", url: "#" },
-  { name: "Web hosting", desc: "When your project outgrows GitHub Pages.", url: "#" },
-  { name: "Developer tools", desc: "Editors and utilities I actually use.", url: "#" }
+  { name: "Claude Code", desc: "For Creating Web Structure", url: "claude.ai" },
+  { name: "Web hosting", desc: "When your project outgrows GitHub Pages.", url: "https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site" },
+  { name: "GitHub Copilot Student", desc: "Editors and utilities I actually use.", url: "https://docs.github.com/en/copilot/how-tos/copilot-on-github/set-up-copilot/enable-copilot/set-up-for-students" }
 ];
 
 const arrow = '<svg class="icon" aria-hidden="true"><use href="#i-out"/></svg>';
