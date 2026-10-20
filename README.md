@@ -70,6 +70,3 @@ This project is not affiliated with or endorsed by Google, YouTube or any app de
 
 Kaustubh Bharti: [Linktree](https://linktr.ee/Kaustubh_2009) · [LinkedIn](https://www.linkedin.com/in/kaustubh-bharti)
 
-## License
-
-Add a license of your choice (e.g. MIT) as a `LICENSE` file.
