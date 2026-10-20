@@ -10,7 +10,8 @@ const CARDS = [
   { name: "Google Photos", tag: "Click to install", url: "https://github.com/vancedto/vanced.to/releases/download/2026-39/vanced.to_rushi_com.google.android.apps.photos_arm64v8a_v7.92.0.977185651_cli1.17.0.6_p1.23.0.1.apk", desc: "An app for Unlimited Google Cloud storage for free.Just Add your account in which you want Unlimited cloud storage." },
   { name: "Youtube Premium", tag: "Click to install", url: "https://github.com/vancedto/vanced.to/releases/download/2026-7/vanced.to_vanced_youtube_ext_v20.05.46_cli5.0.2_p5.14.1.9.apk", desc: "A Youtube Premium for Android. With your own Google account, no tracking, and background playback built in and many other premium features." },
   { name: "Youtube Music Premium", tag: "Click to install", url: "https://github.com/vancedto/vanced.to/releases/download/2026-7/vanced.to_vanced_youtube_music_ext_arm64_v8a_v8.30.54_cli5.0.2_p5.14.1.9.apk", desc: "A Youtube Music Premium for Android. With your own Google account, no tracking, and download any song and many other premium features." },
-  { name: "All In one Pdf reader", tag: "Click to install", url: "https://github.com/vancedto/vanced.to/releases/download/2026-39/vanced.to_rushi_alldocumentreader.office.viewer.filereader.pdfviewer_arm64v8a_v3.2.4_cli1.17.0.6_p1.23.0.1.apk", desc: "Users can enjoy a seamless, unrestricted experience with full access to advanced tools right out of the box." }
+  { name: "YouTube Config File", tag: "Click to install(if you want)", url: "YouTube_config_file.txt", desc: "If you want Basic Normal YouTube Premium look." },
+  { name: "YouTube Music Config File", tag: "Click to install(if you want)", url: "YouTube_Music_config_file.txt", desc: "If you want Basic Normal YouTube Music Premium look." },
 ];
 
 // Placeholder links: replace "#" with your real affiliate URLs.
