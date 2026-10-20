@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>FreePremium</title>
-<meta name="description" content="Apps Premium's features for free without any cost.">
+<title>Toolshelf: good apps, installed safely</title>
+<meta name="description" content="A short list of useful apps from their official sources, with plain guides for installing and updating them safely.">
 <!-- Replace YOUR-USERNAME / YOUR-REPO after deploying -->
 <link rel="canonical" href="https://YOUR-USERNAME.github.io/YOUR-REPO/">
 <meta property="og:type" content="website">
@@ -18,143 +18,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
 <script>/* Apply saved theme before paint (no flash) */
 try{var t=localStorage.getItem("theme")||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");document.documentElement.dataset.theme=t}catch(e){}</script>
-  <style>
-/* ==========================================================
-   TOOLSHELF — style.css
-   EDIT COLORS HERE: change the variables in :root (light mode)
-   and [data-theme="dark"] (dark mode). Accent = --accent.
-   ========================================================== */
-/* Hover effects */
-.nav ul a{position:relative}
-.nav ul a::after{content:"";position:absolute;left:0;bottom:-4px;width:100%;height:2px;
-  background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .25s}
-.nav ul a:hover::after,.nav ul a:focus-visible::after{transform:scaleX(1)}
-.btn:hover{transform:translateY(-2px)}
-summary:hover{color:var(--accent)}
-.steps li{transition:border-color .25s}
-.steps li:hover{border-color:var(--accent)}
-
-
-
-/* Animated headline */
-.hero h1{animation:none}
-.hero h1 .w{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.12em}
-.hero h1 .w > span{display:inline-block;transform:translateY(110%);
-  animation:wordUp .8s cubic-bezier(.2,.8,.2,1) forwards;transition:color .25s}
-.hero h1 .w:hover > span{color:var(--accent)}
-@keyframes wordUp{to{transform:none}}
-@media(prefers-reduced-motion:reduce){.hero h1 .w > span{transform:none}}
-:root{
-  --bg:#F4F6F5; --surface:#FFFFFF; --text:#16201F; --muted:#586563;
-  --line:#D9DFDD; --accent:#0B7A75; --accent-ink:#FFFFFF;
-  --radius:10px;
-  --head:"Bricolage Grotesque",Georgia,serif;
-  --body:"Hanken Grotesk",system-ui,sans-serif;
-  color-scheme:light;
-}
-[data-theme="dark"]{
-  --bg:#121716; --surface:#1A2120; --text:#E8EEEC; --muted:#97A5A2;
-  --line:#2A3331; --accent:#4FD1C5; --accent-ink:#0B1413;
-  color-scheme:dark;
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:5rem}
-body{margin:0;background:var(--bg);color:var(--text);font:1.0625rem/1.65 var(--body);-webkit-font-smoothing:antialiased}
-h1,h2,h3{font-family:var(--head);line-height:1.1;letter-spacing:-.02em;margin:0}
-p{margin:0}
-a{color:inherit}
-:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
-.wrap{width:min(68rem,100% - 2.5rem);margin-inline:auto}
-.skip{position:absolute;left:-999px;top:.5rem;background:var(--accent);color:var(--accent-ink);padding:.5rem 1rem;z-index:99}
-.skip:focus{left:.5rem}
-.icon{width:1.1em;height:1.1em;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex:none}
-
-/* Buttons */
-.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.7rem 1.2rem;border-radius:999px;border:1.5px solid var(--text);
-  font:600 .95rem var(--body);text-decoration:none;color:var(--text);background:transparent;cursor:pointer;transition:background .2s,color .2s,border-color .2s}
-.btn:hover{background:var(--text);color:var(--bg)}
-.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
-.btn.primary:hover{filter:brightness(1.1);background:var(--accent);color:var(--accent-ink)}
-.btn.small{padding:.45rem .95rem;font-size:.9rem}
-
-/* Navbar */
-.nav{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 92%,transparent);border-bottom:1px solid var(--line);backdrop-filter:blur(8px)}
-.nav .wrap{display:flex;align-items:center;gap:1.5rem;min-height:4rem}
-.logo{font:700 1.3rem var(--head);text-decoration:none;margin-right:auto;display:flex;align-items:center;gap:.5rem}
-.logo svg{width:1.4rem;height:1.4rem}
-.nav ul{display:flex;gap:1.5rem;list-style:none;margin:0;padding:0}
-.nav ul a{text-decoration:none;color:var(--muted);font-weight:500;transition:color .2s}
-.nav ul a:hover{color:var(--text)}
-.theme{background:none;border:1.5px solid var(--line);color:var(--text);width:2.4rem;height:2.4rem;border-radius:50%;display:grid;place-items:center;cursor:pointer;transition:border-color .2s}
-.theme:hover{border-color:var(--accent)}
-.theme .moon{display:none}
-[data-theme="dark"] .theme .sun{display:none}
-[data-theme="dark"] .theme .moon{display:block}
-@media(max-width:44rem){.nav ul{display:none}}
-
-/* Sections */
-section{padding:clamp(3.5rem,9vw,6.5rem) 0}
-.lead{color:var(--muted);max-width:38rem;margin-top:.9rem}
-h2{font-size:clamp(1.8rem,4vw,2.6rem)}
-.head{margin-bottom:2.5rem}
-
-/* Hero — the one loud element is the type */
-.hero{padding:clamp(4rem,12vw,9rem) 0 clamp(3rem,7vw,5rem)}
-.hero h1{font-size:clamp(2.6rem,8vw,5.6rem);max-width:15ch;font-weight:800;animation:rise .7s ease both}
-.hero p{font-size:1.2rem;color:var(--muted);max-width:34rem;margin:1.5rem 0 2rem;animation:rise .7s .1s ease both}
-.hero .row{display:flex;flex-wrap:wrap;gap:.8rem;animation:rise .7s .2s ease both}
-@keyframes rise{from{opacity:0;transform:translateY(14px)}}
-
-/* Cards */
-.grid{display:grid;gap:1.1rem;grid-template-columns:repeat(auto-fit,minmax(min(100%,19rem),1fr))}
-.card{display:flex;flex-direction:column;gap:.6rem;padding:1.4rem;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);text-decoration:none;transition:border-color .2s,transform .2s}
-.card:hover{border-color:var(--accent);transform:translateY(-2px)}
-.card h3{font-size:1.3rem;display:flex;justify-content:space-between;align-items:center;gap:.5rem}
-.card p{color:var(--muted);font-size:.98rem;flex:1}
-.tag{font-size:.85rem;font-weight:600;color:var(--accent)}
-
-/* Steps */
-.steps{list-style:none;margin:0;padding:0;display:grid;gap:2rem;grid-template-columns:repeat(auto-fit,minmax(min(100%,17rem),1fr));counter-reset:s}
-.steps li{counter-increment:s;border-top:2px solid var(--text);padding-top:1rem}
-.steps li::before{content:counter(s);font:800 2.4rem var(--head);color:var(--accent);display:block}
-.steps h3{font-size:1.25rem;margin:.3rem 0 .5rem}
-.steps p{color:var(--muted)}
-
-/* FAQ */
-.faq{max-width:46rem}
-details{border-bottom:1px solid var(--line)}
-summary{cursor:pointer;list-style:none;padding:1.1rem 0;font:600 1.15rem var(--head);display:flex;justify-content:space-between;gap:1rem}
-summary::-webkit-details-marker{display:none}
-summary::after{content:"+";font-size:1.5rem;line-height:1;color:var(--accent);transition:transform .25s}
-details[open] summary::after{transform:rotate(45deg)}
-details p{padding:0 0 1.2rem;color:var(--muted);animation:rise .3s ease both}
-
-/* Support / affiliate / hire */
-.alt{border-block:1px solid var(--line);background:var(--surface)}
-.btns{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1.5rem}
-.note{font-size:.88rem;color:var(--muted);margin-top:1.2rem;max-width:40rem}
-.hire{display:flex;flex-wrap:wrap;gap:1.5rem;align-items:center;justify-content:space-between;padding:1.8rem;border:1.5px solid var(--text);border-radius:var(--radius);margin-top:2.5rem}
-.hire h3{font-size:1.5rem}
-.hire p{color:var(--muted);margin-top:.3rem;max-width:30rem}
-
-/* Footer */
-footer{padding:3rem 0;border-top:1px solid var(--line);color:var(--muted);font-size:.92rem}
-footer .wrap{display:grid;gap:1rem}
-footer .links{display:flex;gap:1.2rem;flex-wrap:wrap}
-footer a{color:var(--text)}
-
-/* Simple pages (privacy, 404) */
-.page{padding:5rem 0;max-width:42rem}
-.page h1{font-size:clamp(2.2rem,6vw,3.6rem);margin-bottom:1.5rem}
-.page h2{font-size:1.4rem;margin:2rem 0 .5rem}
-.page p{color:var(--muted);margin-bottom:1rem}
-
-/* Fade-in on scroll (JS adds .in) */
-.reveal{opacity:0;transform:translateY(12px);transition:opacity .5s,transform .5s}
-.reveal.in{opacity:1;transform:none}
-@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}html{scroll-behavior:auto}}
-    </style>
-
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -164,12 +28,12 @@ footer a{color:var(--text)}
   <symbol id="i-logo" viewBox="0 0 32 32"><path d="M6 24h20M6 16h20M6 8h12" stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none"/></symbol>
   <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
   <symbol id="i-moon" viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></symbol>
-  <symbol id="i-out" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/>FreePremium</symbol>
+  <symbol id="i-out" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></symbol>
 </svg>
 
 <header class="nav">
   <div class="wrap">
-    <a class="logo" href="#top"><svg class="icon" aria-hidden="true"><use href="#i-logo"/></svg></a>
+    <a class="logo" href="#top"><svg class="icon" aria-hidden="true"><use href="#i-logo"/></svg>Toolshelf</a>
     <nav aria-label="Main"><ul>
       <li><a href="#tools">Tools</a></li>
       <li><a href="#guides">Guides</a></li>
@@ -200,7 +64,7 @@ footer a{color:var(--text)}
     <div class="wrap">
       <div class="head">
         <h2>On the shelf</h2>
-        <p class="lead">Every link goes to the official site or the open-source project.</p>
+        <p class="lead">Every link goes to the official site or the open-source project. Nothing here is cracked, modded or repackaged.</p>
       </div>
       <!-- Cards are generated from the CARDS array in script.js -->
       <div class="grid" id="cards"></div>
@@ -211,9 +75,9 @@ footer a{color:var(--text)}
     <div class="wrap">
       <div class="head"><h2>Installing an app safely</h2></div>
       <ol class="steps">
-        <li class="reveal"><h3>Install Application</h3><p>Use the link and install your favourite premium app that you want.Also check its name when installed.</p></li>
-        <li class="reveal"><h3>Install microG Services</h3><p>This is for your all your Gmail account setup.</p></li>
-        <li class="reveal"><h3>then keep it updated</h3><p>Don't uninstall microG services its important to run your Gmail account services in these apps.</p></li>
+        <li class="reveal"><h3>Go to the official source</h3><p>Use the project’s own website, its GitHub releases page, or a store you trust. Type the address yourself instead of tapping an ad.</p></li>
+        <li class="reveal"><h3>Check what you downloaded</h3><p>Many projects publish a checksum or signature next to the file. If yours matches, the file wasn’t altered on the way to you.</p></li>
+        <li class="reveal"><h3>Install, then keep it updated</h3><p>Allow installs only for the one app that needs it, then switch that permission back off. Turn on updates so security fixes arrive.</p></li>
       </ol>
     </div>
   </section>
@@ -222,7 +86,7 @@ footer a{color:var(--text)}
     <div class="wrap">
       <div class="head"><h2>Questions people ask</h2></div>
       <div class="faq">
-        <details><summary>Are these apps free?</summary><p>The ones listed are free to use. No need to pay any money to any app</p></details>
+        <details><summary>Are these apps free?</summary><p>The ones listed are free to use. Some projects accept donations, and a few have paid extras. Check each project’s own page.</p></details>
         <details><summary>Why no modded or “premium unlocked” apps?</summary><p>Modified copies of paid apps are usually pirated, and they’re a common way malware spreads. This site only links to official and open-source releases.</p></details>
         <details><summary>How do I know a download is genuine?</summary><p>Download from the project’s own site or repository, and compare the checksum if one is published. If a site is copying the app’s name but not its address, leave.</p></details>
         <details><summary>Can I suggest an app?</summary><p>Yes. Send a message through the contact link below with the project’s official website.</p></details>
@@ -234,16 +98,20 @@ footer a{color:var(--text)}
     <div class="wrap">
       <div class="head">
         <h2>Support this project</h2>
-        <p class="lead">FreePremium is free and has no ads. If it saved you time, you can chip in to cover hosting and the hours it takes to keep the list current.</p>
+        <p class="lead">Toolshelf is free and has no ads. If it saved you time, you can chip in to cover hosting and the hours it takes to keep the list current.</p>
       </div>
       <!-- PLACEHOLDERS: replace each href="#" with your own link -->
       <div class="btns">
-        <a class="btn primary" href="https://wa.me/918552984543" target="_blank" rel="noopener noreferrer">My Whatsapp</a>
-        <a class="btn" href="https://www.instagram.com/itz.kaustubh_2009/" target="_blank" rel="noopener noreferrer">My Instagram Handle</a>
-        <a class="btn" href="https://github.com/Kaustubh-2009" target="_blank" rel="noopener noreferrer">GitHub Sponsors</a>
+        <a class="btn primary" href="#" target="_blank" rel="noopener noreferrer">Pay via UPI</a>
+        <a class="btn" href="#" target="_blank" rel="noopener noreferrer">Ko-fi / Buy Me a Coffee</a>
+        <a class="btn" href="#" target="_blank" rel="noopener noreferrer">GitHub Sponsors</a>
       </div>
 
-      
+      <h3 style="margin-top:3.5rem;font-size:1.5rem">Gear I use</h3>
+      <p class="lead" style="margin-bottom:1.5rem">A few services I use myself. Cards are generated from the AFFILIATES array in script.js.</p>
+      <div class="grid" id="affiliates"></div>
+      <p class="note"><strong>Affiliate disclosure:</strong> some links above may earn me a small commission if you buy through them, at no extra cost to you. I only list things I’d recommend anyway.</p>
+    </div>
   </section>
 
   <section id="contact">
@@ -263,75 +131,14 @@ footer a{color:var(--text)}
 
 <footer>
   <div class="wrap">
-    <p><strong>Disclaimer:</strong> FreePremium is an independent project.</p>
+    <p><strong>Disclaimer:</strong> Toolshelf is an independent project and isn’t affiliated with the apps listed. Names and logos belong to their owners. Always check an app’s official page before installing.</p>
     <div class="links">
       <a href="https://linktr.ee/Kaustubh_2009" target="_blank" rel="noopener noreferrer">Linktree</a>
       <a href="privacy.html">Privacy policy</a>
     </div>
-    <p>&copy; <span id="year">2026</span> FreePremium</p>
+    <p>&copy; <span id="year">2026</span> Toolshelf</p>
   </div>
 </footer>
-<script>
-  /* ==========================================================
-   TOOLSHELF — script.js
-   1) EDIT CARDS:     change the CARDS array below.
-   2) EDIT AFFILIATE: change the AFFILIATES array below.
-   ========================================================== */
-
-// Only link to official sites or open-source projects.
-const CARDS = [
-   { name: "MicroG Services", tag: "Install This First(Most Important)", url: "https://github.com/vancedto/vanced.to/releases/download/2026-8/vanced.to_vanced_gms_microg_v0.3.13.2.250932.apk", desc: "It allows users to access Google services without installing the full Google Play Services package, providing a more lightweight and privacy-focused alternative." },
-  { name: "Google Photos", tag: "Click to install", url: "https://github.com/vancedto/vanced.to/releases/download/2026-39/vanced.to_rushi_com.google.android.apps.photos_arm64v8a_v7.92.0.977185651_cli1.17.0.6_p1.23.0.1.apk", desc: "An app for Unlimited Google Cloud storage for free.Just Add your account in which you want Unlimited cloud storage." },
-  { name: "Youtube Premium", tag: "Click to install", url: "https://github.com/vancedto/vanced.to/releases/download/2026-7/vanced.to_vanced_youtube_ext_v20.05.46_cli5.0.2_p5.14.1.9.apk", desc: "A Youtube Premium for Android. With your own Google account, no tracking, and background playback built in and many other premium features." },
-  { name: "Youtube Music Premium", tag: "Click to install", url: "https://github.com/vancedto/vanced.to/releases/download/2026-7/vanced.to_vanced_youtube_music_ext_arm64_v8a_v8.30.54_cli5.0.2_p5.14.1.9.apk", desc: "A Youtube Music Premium for Android. With your own Google account, no tracking, and download any song and many other premium features." },
-  { name: "All In one Pdf reader", tag: "Click to install", url: "https://github.com/vancedto/vanced.to/releases/download/2026-39/vanced.to_rushi_alldocumentreader.office.viewer.filereader.pdfviewer_arm64v8a_v3.2.4_cli1.17.0.6_p1.23.0.1.apk", desc: "Users can enjoy a seamless, unrestricted experience with full access to advanced tools right out of the box." }
-];
-
-// Placeholder links: replace "#" with your real affiliate URLs.
-
-const arrow = '<svg class="icon" aria-hidden="true"><use href="#i-out"/></svg>';
-
-document.getElementById("cards").innerHTML = CARDS.map(c => `
-  <a class="card reveal" href="${c.url}" target="_blank" rel="noopener noreferrer">
-    <span class="tag">${c.tag}</span>
-    <h3>${c.name} ${arrow}</h3>
-    <p>${c.desc}</p>
-  </a>`).join("");
-
-document.getElementById("affiliates").innerHTML = AFFILIATES.map(a => `
-  <a class="card reveal" href="${a.url}" target="_blank" rel="sponsored noopener noreferrer" data-placeholder="${a.url === '#'}">
-    <h3>${a.name} ${arrow}</h3>
-    <p>${a.desc}</p>
-  </a>`).join("");
-
-// Links still set to "#" do nothing until you fill them in.
-document.addEventListener("click", e => {
-  const a = e.target.closest('a[href="#"]');
-  if (a) e.preventDefault();
-});
-
-// Dark / light toggle, remembered in localStorage
-const root = document.documentElement;
-document.getElementById("theme").addEventListener("click", () => {
-  const next = root.dataset.theme === "dark" ? "light" : "dark";
-  root.dataset.theme = next;
-  try { localStorage.setItem("theme", next); } catch (e) {}
-});
-
-// Fade-in on scroll
-const io = new IntersectionObserver(items => items.forEach(i => {
-  if (i.isIntersecting) { i.target.classList.add("in"); io.unobserve(i.target); }
-}), { threshold: .12 });
-document.querySelectorAll(".reveal").forEach(el => io.observe(el));
-
-document.getElementById("year").textContent = new Date().getFullYear();
-// Animated headline: split into words
-const h1 = document.querySelector(".hero h1");
-h1.setAttribute("aria-label", h1.textContent.trim());
-h1.innerHTML = h1.textContent.trim().split(" ").map((w, i) =>
-  `<span class="w" aria-hidden="true"><span style="animation-delay:${i * 0.09}s">${w}</span></span>`
-).join(" ");
-
-</script>
+<script src="script.js"></script>
 </body>
 </html>
